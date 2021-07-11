@@ -2,8 +2,8 @@
 
 To use it, just compile with
 
-  make
+    make
   
 and then run it with
 
-  ./2dhome
+    ./2dhome
