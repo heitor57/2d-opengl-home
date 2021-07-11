@@ -10,17 +10,15 @@
 
 void draw_circle(GLfloat x, GLfloat y, GLfloat radius){
 	int i;
-	int triangleAmount = 20; //# of triangles used to draw circle
+	int num_triangle = 20;
 	
-	//GLfloat radius = 0.8f; //radius
-	GLfloat twicePi = 2.0f * M_PI;
-	
+	GLfloat twice_pi = 2.0f * M_PI;
 	glBegin(GL_TRIANGLE_FAN);
-		glVertex2f(x, y); // center of circle
-		for(i = 0; i <= triangleAmount;i++) { 
+		glVertex2f(x, y);
+		for(i = 0; i <= num_triangle;i++) { 
 			glVertex2f(
-		            x + (radius * cos(i *  twicePi / triangleAmount)), 
-			    y + (radius * sin(i * twicePi / triangleAmount))
+		            x + (radius * cos(i *  twice_pi / num_triangle)), 
+			    y + (radius * sin(i * twice_pi / num_triangle))
 			);
 		}
 	glEnd();
@@ -28,20 +26,19 @@ void draw_circle(GLfloat x, GLfloat y, GLfloat radius){
 
 void draw_empty_circle(GLfloat x, GLfloat y, GLfloat radius){
 	int i;
-	int triangleAmount = 20; //# of triangles used to draw circle
+	int num_triangle = 20;
 	
-	//GLfloat radius = 0.8f; //radius
-	GLfloat twicePi = 2.0f * M_PI;
-	
+	GLfloat twice_pi = 2.0f * M_PI;
 	glBegin(GL_LINE_LOOP);
-		for(i = 0; i <= triangleAmount;i++) { 
+		for(i = 0; i <= num_triangle;i++) { 
 			glVertex2f(
-		            x + (radius * cos(i *  twicePi / triangleAmount)), 
-			    y + (radius * sin(i * twicePi / triangleAmount))
+		            x + (radius * cos(i *  twice_pi / num_triangle)), 
+			    y + (radius * sin(i * twice_pi / num_triangle))
 			);
 		}
 	glEnd();
 }
+
 void draw_square(double x, double y, double length, int mode)
 {
     double half_length = length / 2;
