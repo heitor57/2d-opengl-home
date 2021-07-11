@@ -7,3 +7,5 @@ To use it, just compile with
 and then run it with
 
     ./2dhome
+ 
+ to close the program just press **ESC**.
