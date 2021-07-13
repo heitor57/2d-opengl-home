@@ -38,7 +38,21 @@ void display(void)
 
     glClear(GL_COLOR_BUFFER_BIT);
     glClear(GL_DEPTH_BUFFER_BIT);
-    /*glColor3f (1.0, 0.0, 0.0);*/
+    glColor3f (1.0, 0.0, 0.0);
+    glLineWidth(5);
+    glBegin(GL_LINES);        
+        glVertex3f (0.15, 0.15, 0.1);
+        glVertex3f (0.25, 0.15, 0.1);
+        glVertex3f (0.35, 0.15, 0.1);
+        glVertex3f (0.45, 0.15, 0.1);
+        glColor3f (0.0, 1.0, 0.0);
+        glVertex3f (0.55, 0.15, 0.1);
+        glVertex3f (0.65, 0.25, 0.1);
+        glVertex3f (0.75, 0.35, 0.1);
+        glVertex3f (0.85, 0.45, 0.1);
+        /*glVertex3f (0.15, 0.15, 0.1);*/
+    glEnd();
+
     glBegin(GL_QUADS);        
         glColor3f (1.0, 0.0, 0.0);
         glVertex3f (0.35, 0.35, 0.1);
